@@ -84,6 +84,7 @@ If it is lower than negative of threshold value, it is an edge(green). Otherwise
 ## Reference
 
 For further information, please read,
+
 Harris, C. H. R. I. S., and M. I. K. E. Stephens. "A combined corner and edge detector. 1988." Cited on: 69.
 
 Also you can check edx course,
