@@ -15,16 +15,16 @@ def main():
     Ix = cv2.Sobel(im_gray, cv2.CV_64F, 1, 0, ksize=5) 
     Iy = cv2.Sobel(im_gray, cv2.CV_64F, 0, 1, ksize=5)
 
-    #Step 4 and 5
+    #Step 3
     A = cv2.GaussianBlur(np.multiply(Ix, Ix),(5,5),1) 
     B = cv2.GaussianBlur(np.multiply(Iy, Iy),(5,5),1)  
     C = cv2.GaussianBlur(np.multiply(Ix,Iy),(5,5),1)   
 
-    #Step 6
+    #Step 5
     k = 0.04
     R = np.multiply(A,B)-np.square(C)-k*np.square(A+B)
 
-    #Step 7 and 8
+    #Step 6
     max_Val = 0.01*R.max()
     for row_number,row in enumerate(R):
         for col_number,val in enumerate(row):
